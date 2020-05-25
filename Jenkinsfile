@@ -17,12 +17,12 @@ pipeline {
                 checkout scm
 
                 echo 'Compiling...'
-                withGradle(gradle: GRADLE_VERSION){
+                withGradle{
                     sh "gradle init"
                 }
 
                 echo 'Building...'
-                withGradle(gradle: GRADLE_VERSION){
+                withGradle{
                     sh "gradle build"
                 }
 
@@ -31,7 +31,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                withGradle(gradle: GRADLE_VERSION){
+                withGradle{
                    sh "./gradlew.bat test"
                 }
             }
