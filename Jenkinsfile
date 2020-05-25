@@ -9,16 +9,23 @@ pipeline {
                 checkout scm
 
                 echo 'Compiling...'
-                sh "gradle init"
+                withGradle {
+                    sh "gradle init"
+                }
 
                 echo 'Building...'
-                sh "gradle build"
+                withGradle {
+                    sh "gradle build"
+                }
+
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh "./gradlew.bat test"
+                withGradle {
+                   sh "./gradlew.bat test"
+                }
             }
         }
     }
