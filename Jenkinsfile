@@ -3,11 +3,11 @@ pipeline {
     agent any
     
     tools{
-        gradle 'gradle-6.4.1'
+        gradle 'Default'
     }
     
     environment{
-        GRADLE_VERSION = 'gradle-6.4.1'
+        GRADLE_VERSION = 'Default'
     }
     
     stages {
