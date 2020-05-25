@@ -18,7 +18,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                "./gradlew clean test"
+                "gradlew.bat test"
             }
         }
     }
