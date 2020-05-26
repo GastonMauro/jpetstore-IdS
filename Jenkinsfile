@@ -33,7 +33,8 @@ pipeline {
             steps {
                 echo 'Testing...'
                 withGradle{
-                   sh "./gradlew.bat test"
+                   //sh "./gradlew.bat test"
+                    sh "gradle test"
                 }
             }
         }
