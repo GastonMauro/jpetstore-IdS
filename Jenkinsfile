@@ -3,7 +3,7 @@ pipeline {
     agent any
     
     tools{
-        jdk 'jdk-11'
+        jdk 'openjdk-11'
         gradle 'Default'
     }
     
